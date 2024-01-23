@@ -91,6 +91,11 @@ public class playgame {
                     TimeUnit.SECONDS.sleep(1);
                     lose();
                 }
+                if (playerPoints == 21){
+                    System.out.printf("\u001B[32m%s\u001B[0m","\nYou got exactly 21 points! You win!\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    win();
+                }
                 dealerTurn();
                 break;
             case "bet":
@@ -110,6 +115,11 @@ public class playgame {
             System.out.printf("\u001B[32m%s\u001B[0m","\nDealer got more than 21 points. You win!\n");
             TimeUnit.SECONDS.sleep(3);
             win();
+        }
+        if (dealerPoints == 21){
+            System.out.printf("\u001B[91m%s\u001B[0m","\nThe dealer got exactly 21 points! You lose!\n");
+            TimeUnit.SECONDS.sleep(2);
+            lose();
         }
         gameloop();
     }
