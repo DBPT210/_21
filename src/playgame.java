@@ -23,6 +23,7 @@ public class playgame {
         TimeUnit.SECONDS.sleep(2);
         if (playerMoney == 0){
             System.out.printf("\u001B[91m%s\u001B[0m","\nYou went backrupt.\n");
+            TimeUnit.SECONDS.sleep(5);
             System.exit(0);
         }
         playerPoints = 0;
@@ -61,6 +62,7 @@ public class playgame {
                 break;
             case "leave":
                 System.out.println("You left the game with " + playerMoney + "$.");
+                TimeUnit.SECONDS.sleep(5);
                 System.exit(1);
                 break;
             default:

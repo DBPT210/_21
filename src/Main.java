@@ -36,6 +36,7 @@ public class Main {
                 main(new String[]{""});
             case "exit":
                 System.out.println("See you soon!");
+                TimeUnit.SECONDS.sleep(5);
                 break;
             default:
                 System.out.println("Invalid input");
